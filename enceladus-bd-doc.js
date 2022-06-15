@@ -1,11 +1,8 @@
 db = db.getSiblingDB('enceladus');
 
-example_id = 1;
-example_id_sem_avaliacoes = 2;
-
 db.midias.insertMany([
 	{
-		"_id": example_id,
+		"_id": "M0",
 		"filename" : "prova1.pdf",
 		"contentType" : "application/pdf",
 		"length" : 12356,
@@ -14,6 +11,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 7.8,
 	},
 	{
+		"_id": "M1",
 		"filename" : "lista1.png",
 		"contentType" : "image/png",
 		"length" : 125448,
@@ -22,6 +20,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 4.3,
 	},
 	{
+		"_id": "M2",
 		"_id": example_id_sem_avaliacoes,
 		"filename" : "lista2.pdf",
 		"contentType" : "application/pdf",
@@ -30,6 +29,7 @@ db.midias.insertMany([
 		"total_avaliacoes": 0,
 	},
 	{
+		"_id": "M3",
 		"filename" : "lista5-prob.pdf",
 		"contentType" : "application/pdf",
 		"length" : 78781,
@@ -38,6 +38,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 6.2,
 	},
 	{
+		"_id": "M4",
 		"filename" : "livro-labbd.pdf",
 		"contentType" : "application/pdf",
 		"length" : 158778,
@@ -45,6 +46,7 @@ db.midias.insertMany([
 		"total_avaliacoes": 0,
 	},
 	{
+		"_id": "M5",
 		"filename" : "lista7-calculo1.pdf",
 		"contentType" : "application/pdf",
 		"length" : 45698,
@@ -53,6 +55,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 8.5,
 	},
 	{
+		"_id": "M6",
 		"filename" : "lista2-flc0474.docx",
 		"contentType" : "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
 		"length" : 78562,
@@ -60,6 +63,7 @@ db.midias.insertMany([
 		"total_avaliacoes": 0,
 	},
 	{
+		"_id": "M7",
 		"filename" : "enunciado-ep1.pdf",
 		"contentType" : "application/pdf",
 		"length" : 14856,
@@ -68,6 +72,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 8.7,
 	},
 	{
+		"_id": "M8",
 		"filename" : "enunciado-ep2.pdf",
 		"contentType" : "application/pdf",
 		"length" : 45894,
@@ -76,6 +81,7 @@ db.midias.insertMany([
 		"media_avaliacoes": 9.5,
 	},
 	{
+		"_id": "M9",
 		"filename" : "provinha1.pdf",
 		"contentType" : "application/pdf",
 		"length" : 35698,

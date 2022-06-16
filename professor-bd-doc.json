@@ -1,9 +1,9 @@
 {
     "email": "jorgesa@usp.br",
     "nome":"Jorge Santos Alves",
-    "página":"poli.usp.br/~jorgesa",
+    "página":"fea.usp.br/~jorgesa",
     "sala":"110A",
-    "ue":"POLI",
+    "ue":"FEA",
     "total_avaliacoes":2,
     "media_avaliacoes":6
 }
@@ -11,9 +11,9 @@
 {
     "email": "cashn@usp.br",
     "nome":"Camila Albuquerque Schneider",
-    "página":"eca.usp.br/~cashn",
+    "página":"fau.usp.br/~cashn",
     "sala":"16B",
-    "ue":"ECA",
+    "ue":"FAU",
     "total_avaliacoes":4,
     "media_avaliacoes":8
 }
@@ -31,18 +31,18 @@
 {
     "email": "claudiambi@usp.br",
     "nome":"Claudia Moreira Bianchi",
-    "página":"fea.usp.br/~claudiambi",
+    "página":"fflch.usp.br/~claudiambi",
     "sala":"112A",
-    "ue":"FEA",
+    "ue":"FFLCH",
     "total_avaliacoes":0,
 }
 
 {
     "email": "carlosfm@usp.br",
     "nome":"Carlos Ferreira Moraes",
-    "página":"ime.usp.br/~carlosfm",
+    "página":"icb.usp.br/~carlosfm",
     "sala":"209C",
-    "ue":"IME",
+    "ue":"ICB",
     "total_avaliacoes":1,
     "media_avaliacoes":9,
 }
@@ -50,9 +50,9 @@
 {
     "email": "crisoh@usp.br",
     "nome":"Cristina Oliveira Hoffmann",
-    "página":"fflch.usp.br/~crisoh",
+    "página":"ime.usp.br/~crisoh",
     "sala":"100A",
-    "ue":"FFLCH",
+    "ue":"IME",
     "total_avaliacoes":2,
     "media_avaliacoes":7,
 }
@@ -60,9 +60,9 @@
 {
     "email": "alfps@usp.br",
     "nome":"Alfredo Pereira de Souza",
-    "página":"io.usp.br/~alfps",
+    "página":"fea.usp.br/~alfps",
     "sala":"200B",
-    "ue":"IO",
+    "ue":"FEA",
     "total_avaliacoes":7,
     "media_avaliacoes":6,
 }
@@ -71,9 +71,9 @@
 {
     "email": "joanaros@usp.br",
     "nome":"Joana Rossi",
-    "página":"fe.usp.br/~joanaros",
+    "página":"io.usp.br/~joanaros",
     "sala":"101A",
-    "ue":"FE",
+    "ue":"IO",
     "total_avaliacoes":3,
     "media_avaliacoes":9,
 }

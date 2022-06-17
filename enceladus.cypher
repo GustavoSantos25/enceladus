@@ -489,3 +489,202 @@ CREATE (user)-[:Membro {papel:"presidente", permissoes: "111", dataInicio: date(
 MATCH (user), (grupo)
 WHERE user.nusp = 11256973 AND grupo.nome = "Software Livre"
 CREATE (user)-[:Membro {permissoes: "000", dataInicio: date("2022-04-14")}]->(grupo);
+
+CREATE (tag:Tag {nome:"Inteligência Artificial"});
+CREATE (tag:Tag {nome:"Machine Learning"});
+
+CREATE (tag:Tag {nome:"Estatística"});
+
+CREATE (tag:Tag {nome:"Micro Economia"});
+CREATE (tag:Tag {nome:"Macro Economia"});
+
+CREATE (tag:Tag {nome:"Aminoácidos"});
+CREATE (tag:Tag {nome:"Tardigrados"});
+CREATE (tag:Tag {nome:"Genética"});
+
+CREATE (tag:Tag {nome:"Banco de Dados"});
+CREATE (tag:Tag {nome:"Neo4J"});
+CREATE (tag:Tag {nome:"SQL"});
+CREATE (tag:Tag {nome:"NoSQL"});
+
+CREATE (tag:Tag {nome:"Zonas de Urbanização"});
+CREATE (tag:Tag {nome:"Planejamento Urbano"});
+CREATE (tag:Tag {nome:"Brasília"});
+
+CREATE (tag:Tag {nome:"Ciências da Computação"});
+
+CREATE (tag:Tag {nome:"Código Livre"});
+CREATE (tag:Tag {nome:"Código Aberto"});
+
+CREATE (tag:Tag {nome:"Arduíno"});
+CREATE (tag:Tag {nome:"Eletrônica"});
+
+//cria as classificações
+MATCH (tag), (forum)
+WHERE tag.nome = "Inteligência Artificial" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-03-15")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Machine Learning" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date("2022-05-22")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Estatística" AND forum.oferecimento = "EAE0106" 
+CREATE (tag)-[:Classifica {usuario:785461, data:date("2022-06-25")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Micro Economia" AND forum.oferecimento = "EAE0106" 
+CREATE (tag)-[:Classifica {usuario:19756484, data:date("2022-04-07")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Macro Economia" AND forum.oferecimento = "EAE0106" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date("2022-04-04")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Aminoácidos" AND forum.oferecimento = "BMB0260" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date("2022-05-08")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Tardigrados" AND forum.oferecimento = "BMB0260" 
+CREATE (tag)-[:Classifica {usuario:89754613, data:date("2022-02-17")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Genética" AND forum.oferecimento = "BMB0260" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date("2022-03-07")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Banco de Dados" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:12486789, data:date("2022-05-23")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Neo4J" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date("2022-05-12")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "SQL" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-04-13")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "NoSQL" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-05-14")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Ciências da Computação" AND forum.oferecimento = "MAC0439" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date("2022-05-18")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Zonas de Urbanização" AND forum.oferecimento = "AUH0236" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date("2022-04-29")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Planejamento Urbano" AND forum.oferecimento = "AUH0236" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-05-29")}]->(forum);
+
+MATCH (tag), (forum)
+WHERE tag.nome = "Brasília" AND forum.oferecimento = "AUH0236" 
+CREATE (tag)-[:Classifica {usuario:11225698, data:date("2022-04-30")}]->(forum);
+
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Inteligência Artificial" AND topico.titulo = "Dúvidas Gerais MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-03-15")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Machine Learning" AND topico.titulo = "Dúvidas Gerais MAC0439" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date("2022-05-22")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Estatística" AND topico.titulo = "Dúvidas Gerais EAE0106" 
+CREATE (tag)-[:Classifica {usuario:785461, data:date("2022-06-25")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Micro Economia" AND topico.titulo = "Dúvidas Gerais EAE0106" 
+CREATE (tag)-[:Classifica {usuario:19756484, data:date("2022-04-07")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Macro Economia" AND topico.titulo = "Dúvidas Gerais EAE0106" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date("2022-04-04")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Aminoácidos" AND topico.titulo = "Fórum de Dúvidas de BMB0260" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date("2022-05-08")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Tardigrados" AND topico.titulo = "Fórum de Dúvidas de BMB0260" 
+CREATE (tag)-[:Classifica {usuario:89754613, data:date("2022-02-17")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Genética" AND topico.titulo = "Fórum de Dúvidas de BMB0260" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date("2022-03-07")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Banco de Dados" AND topico.titulo = "Dúvidas gerais MAC0439" 
+CREATE (tag)-[:Classifica {usuario:12486789, data:date("2022-05-23")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Banco de Dados" AND topico.titulo = "Dúvidas da matéria MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-04-12")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Neo4J" AND topico.titulo = "Dúvidas da matéria MAC0439" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date("2022-05-12")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "SQL" AND topico.titulo = "Dúvidas da matéria MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-04-13")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "NoSQL" AND topico.titulo = "Dúvidas da matéria MAC0439" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-05-14")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Ciências da Computação" AND topico.titulo = "Dúvidas Gerais MAC0439" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date("2022-05-18")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Ciências da Computação" AND topico.titulo = "Dúvidas da matéria MAC0439" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date("2022-06-26")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Zonas de Urbanização" AND topico.titulo = "Dúvidas Gerais AUH0236" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date("2022-04-29")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Planejamento Urbano" AND topico.titulo = "Dúvidas Gerais AUH0236" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-05-29")}]->(topico);
+
+MATCH (tag), (topico)
+WHERE tag.nome = "Brasília" AND topico.titulo = "Dúvidas Gerais AUH0236" 
+CREATE (tag)-[:Classifica {usuario:11225698, data:date("2022-04-30")}]->(topico);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Ciências da Computação" AND grupo.nome = "Hardware Livre"
+CREATE (tag)-[:Classifica {usuario:12161816, data:date("2022-03-10")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Código Aberto" AND grupo.nome = "Hardware Livre"
+CREATE (tag)-[:Classifica {usuario:12486789, data:date("2022-05-11")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Código Livre" AND grupo.nome = "Hardware Livre"
+CREATE (tag)-[:Classifica {usuario:11225698, data:date("2022-04-03")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Eletrônica" AND grupo.nome = "Hardware Livre"
+CREATE (tag)-[:Classifica {usuario:7524315, data:date("2022-06-08")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Arduíno" AND grupo.nome = "Hardware Livre"
+CREATE (tag)-[:Classifica {usuario:16327498, data:date("2022-04-08")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Ciências da Computação" AND grupo.nome = "Software Livre"
+CREATE (tag)-[:Classifica {usuario:12161816, data:date("2022-04-09")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Código Aberto" AND grupo.nome = "Software Livre"
+CREATE (tag)-[:Classifica {usuario:8754216, data:date("2022-03-05")}]->(grupo);
+
+MATCH (tag), (grupo)
+WHERE tag.nome = "Código Livre" AND grupo.nome = "Software Livre"
+CREATE (tag)-[:Classifica {usuario:12341516, data:date("2022-03-12")}]->(grupo);

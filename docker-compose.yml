@@ -9,5 +9,6 @@ services:
       - "7687:7687"
     volumes:
       - ./neo4j/plugins:/plugins
+      - ./scripts:/scripts
     environment:
       NEO4J_dbms_logs_debug_level: DEBUG

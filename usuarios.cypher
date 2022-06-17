@@ -1,0 +1,15 @@
+CREATE (user:User {nusp:11225698, nome: "José Cardoso Neto"});
+CREATE (user:User {nusp:89754613, nome: "Julia dos Santos Pereira"});
+CREATE (user:User {nusp:78124549, nome: "Marcos Barbosa Oliveira"});
+CREATE (user:User {nusp:12161816, nome: "Maria Silva de Sá"});
+CREATE (user:User {nusp:23456789, nome: "Luan da Conceição Silva"});
+CREATE (user:User {nusp:785461, nome: "Matheus Souza"});
+CREATE (user:User {nusp:12341516, nome: "Pamella Castro Correia"});
+CREATE (user:User {nusp:19756484, nome: "Marta Ribeiro Rocha"});
+CREATE (user:User {nusp:11256973, nome: "Lucas Souza Teixeira"});
+CREATE (user:User {nusp:13125467, nome: "Miguel Ferreira de Castro"});
+CREATE (user:User {nusp:12486789, nome: "Vitor Serafim Morais"});
+CREATE (user:User {nusp:13469284, nome: "Juventino Magalhães"});
+CREATE (user:User {nusp:16327498, nome: "Mariana Serra Azevedo"});
+CREATE (user:User {nusp:8754216, nome: "Luana Guimarães Souza"});
+CREATE (user:User {nusp:7524315, nome: "Isabela Fontes Silva"});

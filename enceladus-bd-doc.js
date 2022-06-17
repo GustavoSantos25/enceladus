@@ -21,7 +21,6 @@ db.midias.insertMany([
 	},
 	{
 		"_id": "M2",
-		"_id": example_id_sem_avaliacoes,
 		"filename" : "lista2.pdf",
 		"contentType" : "application/pdf",
 		"length" : 254478,
@@ -731,5 +730,40 @@ db.oferecimentos.insertMany([
 // 		}
 // 	}
 // );
+
+//CONSULTA 1:
+//Retorna os professores mais bem avaliados juntamente com as disciplinas que eles lecionaram
+db.oferecimentos.aggregate([
+	{$sort:{"professor.media_avaliacoes":-1}},
+	{$group:{
+		_id:"$professor",
+        disciplinas:{$addToSet:"$coddis"}
+	}},
+    {$project:{_id:0, professor:"$_id", disciplinas:"$disciplinas"}}
+]);
+
+//CONSULTA 2:
+//Retorna os oferecimentos de um certo instituto ou curso
+//Precisa apenas modificar a expressão regular para conseguir capturar os códigos referente ao curso ou ao instituto em questão
+db.oferecimentos.find(
+    {"coddis":/^MAC/},
+    {}
+);
+
+
+//CONSULTA 3
+//Retornar as tarefas cujo prazo de entrega ainda não passou
+//Será um consulta útil para os usuários verificarem as tarefas que eles precisam fazer e, possivelmente,
+//organizar a sua agenda de acordo
+db.oferecimentos.aggregate([
+    {$unwind:"$tarefas"},
+    {$match:{"tarefas.data_entrega":{$gt: new Date()}}},
+    {$group:{
+        _id:"$coddis",
+        tarefas:{$addToSet:"$tarefas"}
+    }},
+    {$project:{_id:0, disciplina:"$_id", tarefas:"$tarefas"}}
+]);
+
 
 

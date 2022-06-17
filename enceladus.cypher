@@ -463,3 +463,29 @@ WHERE user.nusp = 11256973 AND professor.email = "joanaros@usp.br"
 CREATE (user)-[:Avalia {data: date("2022-03-14"), nota:8}]->(professor);
 
 
+CREATE (grupo :GrupoExtensao{nome: "Hardware Livre", descricao: "<t>O grupo</t><p>Visando promover estudos ligados à área de Hardware Livre, foi criado um grupo no CCSL do IME-USP para práticas com (inicialmente) o Arduino. O nosso objetivo, no entanto, é, além de inicialmente dominar a tecnologia envolvida com este tipo de dispositivo, conduzir pesquisas originais com Hardware Livre em geral. As aplicações em pesquisa são exploradas por alunos de graduação, mestrado e doutorado. Nosso intuito é aumentar o leque de aplicações do Hardware aberto em pesquisa envolvendo diversas áreas da ciência. Já realizamos projetos relacionados com as áreas de Ciência da Computação, Engenharia da Computação, Arquitetura, Artes Plásticas, Biologia, Bioquímica, Computação Musical, Farmácia, Física, Música e outras áreas. Estamos abertos para novos projetos e parcerias.",cor:"FFF"});
+CREATE (grupo :GrupoExtensao{nome: "Software Livre", descricao: "Nosso objetivo é contribuir com a comunidade SL e aprimorar nossos conhecimentos",cor:"0FF"});
+
+MATCH (user), (grupo)
+WHERE user.nusp = 11256973 AND grupo.nome = "Hardware Livre"
+CREATE (user)-[:Membro {papel:"tesoureiro", permissoes: "011", dataInicio: date("2022-04-14")}]->(grupo);
+
+MATCH (user), (grupo)
+WHERE user.nusp = 78124549 AND grupo.nome = "Hardware Livre"
+CREATE (user)-[:Membro {papel:"presidente", permissoes: "111", dataInicio: date("2022-04-14")}]->(grupo);
+
+MATCH (user), (grupo)
+WHERE user.nusp = 13469284 AND grupo.nome = "Hardware Livre"
+CREATE (user)-[:Membro {permissoes: "011", dataInicio: date("2022-04-14")}]->(grupo);
+
+MATCH (user), (grupo)
+WHERE user.nusp = 16327498 AND grupo.nome = "Software Livre"
+CREATE (user)-[:Membro {papel:"tesoureiro", permissoes: "000", dataInicio: date("2022-04-14")}]->(grupo);
+
+MATCH (user), (grupo)
+WHERE user.nusp = 19756484 AND grupo.nome = "Software Livre"
+CREATE (user)-[:Membro {papel:"presidente", permissoes: "111", dataInicio: date("2022-04-14")}]->(grupo);
+
+MATCH (user), (grupo)
+WHERE user.nusp = 11256973 AND grupo.nome = "Software Livre"
+CREATE (user)-[:Membro {permissoes: "000", dataInicio: date("2022-04-14")}]->(grupo);

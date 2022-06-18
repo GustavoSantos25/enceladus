@@ -945,11 +945,350 @@ WHERE mens.mId = "Mens31" AND topico.idTopico = "Topic12"
 CREATE (mens)-[:Compoe {}]->(topico);
 
 
+CREATE (conteudo:Conteudo {contId:"T0"});
+CREATE (conteudo:Conteudo {contId:"T1"});
+CREATE (conteudo:Conteudo {contId:"T2"});
+CREATE (conteudo:Conteudo {contId:"T3"});
+CREATE (conteudo:Conteudo {contId:"T4"});
+CREATE (conteudo:Conteudo {contId:"T5"});
+CREATE (conteudo:Conteudo {contId:"T6"});
+CREATE (conteudo:Conteudo {contId:"T7"});
+CREATE (conteudo:Conteudo {contId:"T8"});
+CREATE (conteudo:Conteudo {contId:"T9"});
+CREATE (conteudo:Conteudo {contId:"T10"});
+CREATE (conteudo:Conteudo {contId:"T11"});
+CREATE (conteudo:Conteudo {contId:"T12"});
+CREATE (conteudo:Conteudo {contId:"T13"});
+CREATE (conteudo:Conteudo {contId:"T14"});
+CREATE (conteudo:Conteudo {contId:"T15"});
+CREATE (conteudo:Conteudo {contId:"T16"});
+CREATE (conteudo:Conteudo {contId:"T17"});
+CREATE (conteudo:Conteudo {contId:"T18"});
+CREATE (conteudo:Conteudo {contId:"T19"});
+CREATE (conteudo:Conteudo {contId:"T20"});
 
 
+// Avaliações do conteúdo pelos usuários
+
+MATCH (user), (cont)
+WHERE user.nusp = 11225698 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-16"), nota:5}]->(cont);
 
 
+MATCH (user), (cont)
+WHERE user.nusp = 89754613 AND cont.contId = "T18"
+CREATE (user)-[:Avalia {data:date("2022-06-11"), nota:6}]->(cont);
 
+
+MATCH (user), (cont)
+WHERE user.nusp = 78124549 AND cont.contId = "T17"
+CREATE (user)-[:Avalia {data:date("2022-05-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12161816 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-14"), nota:6}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 23456789 AND cont.contId = "T12"
+CREATE (user)-[:Avalia {data:date("2022-05-04"), nota:5}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 785461 AND cont.contId = "T17"
+CREATE (user)-[:Avalia {data:date("2022-05-04"), nota:6}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12341516 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-13"), nota:4}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 19756484 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-21"), nota:8}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 11256973 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-06-14"), nota:6}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 13125467 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-26"), nota:5}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12486789 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-04-14"), nota:8}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 13469284 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-05-24"), nota:9}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 16327498 AND cont.contId = "T11"
+CREATE (user)-[:Avalia {data:date("2022-04-24"), nota:6}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 8754216 AND cont.contId = "T18"
+CREATE (user)-[:Avalia {data:date("2022-05-22"), nota:10}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 7524315 AND cont.contId = "T17"
+CREATE (user)-[:Avalia {data:date("2022-04-25"), nota:4}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 11225698 AND cont.contId = "T1"
+CREATE (user)-[:Avalia {data:date("2021-11-13"), nota:5}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 89754613 AND cont.contId = "T9"
+CREATE (user)-[:Avalia {data:date("2021-07-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 78124549 AND cont.contId = "T8"
+CREATE (user)-[:Avalia {data:date("2021-04-21"), nota:8}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12161816 AND cont.contId = "T2"
+CREATE (user)-[:Avalia {data:date("2021-08-21"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 23456789 AND cont.contId = "T3"
+CREATE (user)-[:Avalia {data:date("2020-06-16"), nota:8}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 785461 AND cont.contId = "T8"
+CREATE (user)-[:Avalia {data:date("2021-04-27"), nota:9}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12341516 AND cont.contId = "T2"
+CREATE (user)-[:Avalia {data:date("2021-04-12"), nota:5}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 19756484 AND cont.contId = "T9"
+CREATE (user)-[:Avalia {data:date("2020-11-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 11256973 AND cont.contId = "T1"
+CREATE (user)-[:Avalia {data:date("2021-05-14"), nota:8}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 13125467 AND cont.contId = "T3"
+CREATE (user)-[:Avalia {data:date("2021-06-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 12486789 AND cont.contId = "T2"
+CREATE (user)-[:Avalia {data:date("2021-06-24"), nota:6}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 13469284 AND cont.contId = "T3"
+CREATE (user)-[:Avalia {data:date("2021-11-14"), nota:4}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 16327498 AND cont.contId = "T6"
+CREATE (user)-[:Avalia {data:date("2021-07-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 8754216 AND cont.contId = "T7"
+CREATE (user)-[:Avalia {data:date("2022-03-14"), nota:7}]->(cont);
+
+
+MATCH (user), (cont)
+WHERE user.nusp = 7524315 AND cont.contId = "T5"
+CREATE (user)-[:Avalia {data:date("2022-03-14"), nota:7}]->(cont);
+
+
+// Tags dos conteúdos.
+MATCH (tag), (cont)
+WHERE tag.nome = "Inteligência Artificial" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-3-15)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Machine Learning" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date(2022-5-22)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Estatística" AND cont.contId = "T1" 
+CREATE (tag)-[:Classifica {usuario:785461, data:date(2022-6-25)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Micro Economia" AND cont.contId = "T1" 
+CREATE (tag)-[:Classifica {usuario:19756484, data:date(2022-4-07)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Macro Economia" AND cont.contId = "T1" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date(2022-4-04)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Aminoácidos" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date(2022-5-08)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Tardigrados" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:89754613, data:date(2022-2-17)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Genética" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date(2022-3-07)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Banco de Dados" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:12486789, data:date(2022-5-23)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Neo4J" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date(2022-5-12)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "SQL" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-4-13)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "NoSQL" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-5-14)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Ciências da Computação" AND cont.contId = "T4" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date(2022-5-18)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Zonas de Urbanização" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date(2022-4-29)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Planejamento Urbano" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-5-29)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Brasília" AND cont.contId = "T2" 
+CREATE (tag)-[:Classifica {usuario:11225698, data:date(2022-4-30)}]->(cont);
+
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Inteligência Artificial" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-3-15)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Machine Learning" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date(2022-5-22)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Estatística" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:785461, data:date(2022-6-25)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Micro Economia" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:19756484, data:date(2022-4-07)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Macro Economia" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date(2022-4-04)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Aminoácidos" AND cont.contId = "T10" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date(2022-5-08)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Tardigrados" AND cont.contId = "T10" 
+CREATE (tag)-[:Classifica {usuario:89754613, data:date(2022-2-17)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Genética" AND cont.contId = "T10" 
+CREATE (tag)-[:Classifica {usuario:23456789, data:date(2022-3-07)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Banco de Dados" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:12486789, data:date(2022-5-23)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Banco de Dados" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-4-12)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Neo4J" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:11256973, data:date(2022-5-12)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "SQL" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-4-13)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "NoSQL" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-5-14)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Ciências da Computação" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date(2022-5-18)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Ciências da Computação" AND cont.contId = "T19" 
+CREATE (tag)-[:Classifica {usuario:12161816, data:date(2022-6-26)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Zonas de Urbanização" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:78124549, data:date(2022-4-29)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Planejamento Urbano" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-5-29)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Brasília" AND cont.contId = "T16" 
+CREATE (tag)-[:Classifica {usuario:11225698, data:date(2022-4-30)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Ciências da Computação" AND cont.contId = "T15"
+CREATE (tag)-[:Classifica {usuario:12161816, data:date(2022-3-10)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Código Aberto" AND cont.contId = "T12"
+CREATE (tag)-[:Classifica {usuario:12486789, data:date(2022-5-11)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Código Livre" AND cont.contId = "T11"
+CREATE (tag)-[:Classifica {usuario:11225698, data:date(2022-4-03)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Eletrônica" AND cont.contId = "T5"
+CREATE (tag)-[:Classifica {usuario:7524315, data:date(2022-6-08)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Arduíno" AND cont.contId = "T5"
+CREATE (tag)-[:Classifica {usuario:16327498, data:date(2022-4-08)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Ciências da Computação" AND cont.contId = "T7"
+CREATE (tag)-[:Classifica {usuario:12161816, data:date(2022-4-09)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Código Aberto" AND cont.contId = "T8"
+CREATE (tag)-[:Classifica {usuario:8754216, data:date(2022-3-05)}]->(cont);
+
+MATCH (tag), (cont)
+WHERE tag.nome = "Código Livre" AND cont.contId = "T3"
+CREATE (tag)-[:Classifica {usuario:12341516, data:date(2022-3-12)}]->(cont);
 
 
 

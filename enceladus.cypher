@@ -100,15 +100,15 @@ CREATE (forum:Forum {oferecimento:"BMB0260", visibilidade:1});
 CREATE (forum:Forum {oferecimento:"MAC0425", visibilidade:1});
 
 //Cria os tópicos
-CREATE (topico:Topico {titulo:"Dúvidas Gerais EAE0106", tipo:"oferecimento", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Dúvidas Gerais MAC0439", tipo:"oferecimento", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Dúvidas Gerais AUH236", tipo:"oferecimento", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Fórum de Dúvidas de BMB0260", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic0", titulo:"Dúvidas Gerais EAE0106", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic1", titulo:"Dúvidas Gerais MAC0439", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic2", titulo:"Dúvidas Gerais AUH236", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic3", titulo:"Fórum de Dúvidas de BMB0260", tipo:"oferecimento", visibilidade:"publico"});
 
-CREATE (topico:Topico {titulo:"Dúvidas do Conteúdo EAE0106", tipo:"conteudo", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Dúvidas da matéria MAC0439", tipo:"conteudo", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Dúvidas Gerais AUH236", tipo:"oferecimento", visibilidade:"publico"});
-CREATE (topico:Topico {titulo:"Fórum de Dúvidas de BMB0260", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic4", titulo:"Dúvidas do Conteúdo EAE0106", tipo:"conteudo", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic5", titulo:"Dúvidas da matéria MAC0439", tipo:"conteudo", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic6", titulo:"Dúvidas Gerais AUH236", tipo:"oferecimento", visibilidade:"publico"});
+CREATE (topico:Topico {idTopico:"Topic7", titulo:"Fórum de Dúvidas de BMB0260", tipo:"oferecimento", visibilidade:"publico"});
 
 // Relaciona os tópicos com os fóruns (PERTENCE)
 MATCH (topico), (forum)
@@ -146,28 +146,28 @@ CREATE (topico)-[:Pertence]->(forum);
 
 
 // Cria os Fóruns PM entre usuários
-CREATE (topico:Topico {titulo:"PM:11225698/89754613 ", tipo:"PM", usuario1:11225698, usuario2:89754613});
-CREATE (topico:Topico {titulo:"PM:78124549/12161816 ", tipo:"PM", usuario1:78124549, usuario2:12161816});
-CREATE (topico:Topico {titulo:"PM:23456789/785461 ", tipo:"PM", usuario1:23456789, usuario2:785461});
-CREATE (topico:Topico {titulo:"PM:12341516/19756484 ", tipo:"PM", usuario1:12341516, usuario2:19756484});
-CREATE (topico:Topico {titulo:"PM:11256973/13125467 ", tipo:"PM", usuario1:11256973, usuario2:13125467});
-CREATE (topico:Topico {titulo:"PM:12486789/13469284 ", tipo:"PM", usuario1:12486789, usuario2:13469284});
-CREATE (topico:Topico {titulo:"PM:16327498/8754216 ", tipo:"PM", usuario1:16327498, usuario2:8754216});
+CREATE (topico:Topico {idTopico:"Topic8", titulo:"PM:11225698/89754613 ", tipo:"PM", usuario1:11225698, usuario2:89754613});
+CREATE (topico:Topico {idTopico:"Topic9", titulo:"PM:78124549/12161816 ", tipo:"PM", usuario1:78124549, usuario2:12161816});
+CREATE (topico:Topico {idTopico:"Topic10", titulo:"PM:23456789/785461 ", tipo:"PM", usuario1:23456789, usuario2:785461});
+CREATE (topico:Topico {idTopico:"Topic11", titulo:"PM:12341516/19756484 ", tipo:"PM", usuario1:12341516, usuario2:19756484});
+CREATE (topico:Topico {idTopico:"Topic12", titulo:"PM:11256973/13125467 ", tipo:"PM", usuario1:11256973, usuario2:13125467});
+CREATE (topico:Topico {idTopico:"Topic13", titulo:"PM:12486789/13469284 ", tipo:"PM", usuario1:12486789, usuario2:13469284});
+CREATE (topico:Topico {idTopico:"Topic14", titulo:"PM:16327498/8754216 ", tipo:"PM", usuario1:16327498, usuario2:8754216});
 
-CREATE (topico:Topico {titulo:"PM:11225698/7524315 ", tipo:"PM", usuario1:11225698, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:78124549/7524315 ", tipo:"PM", usuario1:78124549, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:23456789/7524315 ", tipo:"PM", usuario1:23456789, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:12341516/7524315 ", tipo:"PM", usuario1:12341516, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:11256973/7524315 ", tipo:"PM", usuario1:11256973, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:12486789/7524315 ", tipo:"PM", usuario1:12486789, usuario2:7524315});
-CREATE (topico:Topico {titulo:"PM:16327498/7524315 ", tipo:"PM", usuario1:16327498, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic15", titulo:"PM:11225698/7524315 ", tipo:"PM", usuario1:11225698, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic16", titulo:"PM:78124549/7524315 ", tipo:"PM", usuario1:78124549, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic17", titulo:"PM:23456789/7524315 ", tipo:"PM", usuario1:23456789, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic18", titulo:"PM:12341516/7524315 ", tipo:"PM", usuario1:12341516, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic19", titulo:"PM:11256973/7524315 ", tipo:"PM", usuario1:11256973, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic20", titulo:"PM:12486789/7524315 ", tipo:"PM", usuario1:12486789, usuario2:7524315});
+CREATE (topico:Topico {idTopico:"Topic21", titulo:"PM:16327498/7524315 ", tipo:"PM", usuario1:16327498, usuario2:7524315});
 
-CREATE (topico:Topico {titulo:"PM:11225698/12161816 ", tipo:"PM", usuario1:11225698, usuario2:12161816});
-CREATE (topico:Topico {titulo:"PM:23456789/19756484 ", tipo:"PM", usuario1:23456789, usuario2:19756484});
-CREATE (topico:Topico {titulo:"PM:11256973/13469284 ", tipo:"PM", usuario1:11256973, usuario2:13469284});
-CREATE (topico:Topico {titulo:"PM:11225698/16327498 ", tipo:"PM", usuario1:11225698, usuario2:16327498});
-CREATE (topico:Topico {titulo:"PM:23456789/8754216 ", tipo:"PM", usuario1:23456789, usuario2:8754216});
-CREATE (topico:Topico {titulo:"PM:11256973/13469284 ", tipo:"PM", usuario1:11256973, usuario2:13469284});
+CREATE (topico:Topico {idTopico:"Topic22", titulo:"PM:11225698/12161816 ", tipo:"PM", usuario1:11225698, usuario2:12161816});
+CREATE (topico:Topico {idTopico:"Topic23", titulo:"PM:23456789/19756484 ", tipo:"PM", usuario1:23456789, usuario2:19756484});
+CREATE (topico:Topico {idTopico:"Topic24", titulo:"PM:11256973/13469284 ", tipo:"PM", usuario1:11256973, usuario2:13469284});
+CREATE (topico:Topico {idTopico:"Topic25", titulo:"PM:11225698/16327498 ", tipo:"PM", usuario1:11225698, usuario2:16327498});
+CREATE (topico:Topico {idTopico:"Topic26", titulo:"PM:23456789/8754216 ", tipo:"PM", usuario1:23456789, usuario2:8754216});
+CREATE (topico:Topico {idTopico:"Topic27", titulo:"PM:11256973/13469284 ", tipo:"PM", usuario1:11256973, usuario2:13469284});
 
 //Cria os monitores e professores
 CREATE (monitor:Monitor {email: "heitorab@usp.br", nome: "Heitor Augusto Barbosa"});
@@ -688,3 +688,278 @@ CREATE (tag)-[:Classifica {usuario:8754216, data:date("2022-03-05")}]->(grupo);
 MATCH (tag), (grupo)
 WHERE tag.nome = "Código Livre" AND grupo.nome = "Software Livre"
 CREATE (tag)-[:Classifica {usuario:12341516, data:date("2022-03-12")}]->(grupo);
+
+
+//PM 1
+CREATE (mens:Mensagem {mId:"Mens1", texto:"E aí,blz?", datahora:"2022-06-02T10:11:32.122+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens1" AND user.nusp = 11225698
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens1" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens2", texto:"Tranquilo, e aí?", datahora:"2022-06-02T10:11:34.132+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens2" AND user.nusp = 89754613
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens2" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens3", texto:"Tudo bem também. Já fez a lista de MAC0425?", datahora:"2022-06-02T10:11:35.326+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens3" AND user.nusp = 11225698
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens3" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens4", texto:"Os dois primeiros.", datahora:"2022-06-02T10:11:36.678+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens4" AND user.nusp = 89754613
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens4" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens5", texto:"Como faz a dois?", datahora:"2022-06-02T10:11:54.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens5" AND user.nusp = 11225698
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens5" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens6", texto:"Vamos pro bandex que eu te explico. Física?", datahora:"2022-06-02T10:12:12.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens6" AND user.nusp = 89754613
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens6" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens7", texto:"Partiu!", datahora:"2022-06-02T10:12:21.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens6" AND user.nusp = 11225698
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens6" AND topico.idTopico = "Topic8"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+//PM2
+CREATE (mens:Mensagem {mId:"Mens8", texto:"Oi, tudo bom?", datahora:"2022-05-02T10:12:32.122+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens8" AND user.nusp = 78124549
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens8" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens9", texto:"Tudo e você?", datahora:"2022-06-02T10:12:34.132+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens9" AND user.nusp = 12161816
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens9" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens10", texto:"Quer estudar stat?", datahora:"2022-06-02T10:12:35.326+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens10" AND user.nusp = 78124549
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens10" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens11", texto:"Bora! aonde?", datahora:"2022-06-02T10:12:36.678+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens11" AND user.nusp = 12161816
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens11" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens12", texto:"Vamo no AI?", datahora:"2022-06-02T10:12:54.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens12" AND user.nusp = 78124549
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens12" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens13", texto:"Partiu!", datahora:"2022-06-02T10:12:21.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens13" AND user.nusp = 12161816
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens13" AND topico.idTopico = "Topic9"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+
+//PM3
+CREATE (mens:Mensagem {mId:"Mens14", texto:"Você vai na reunião sexta", datahora:"2022-06-03T10:12:32.122+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens14" AND user.nusp = 785461
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens14" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens15", texto:"Vou sim, e você?", datahora:"2022-06-04T10:12:34.132+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens15" AND user.nusp = 23456789
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens15" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens16", texto:"Essa semana acho que não. Você pega o casaco que eu esqueci?", datahora:"2022-06-04T10:12:35.326+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens16" AND user.nusp = 785461
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens16" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens17", texto:"Pego sim", datahora:"2022-06-04T10:12:36.678+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens17" AND user.nusp = 23456789
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens17" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens18", texto:"Valeu", datahora:"2022-06-04T10:12:54.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens18" AND user.nusp = 785461
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens18" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens19", texto:"Já consegui o casaco, precisa mais não. Vlw", datahora:"2022-06-06T10:12:21.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens19" AND user.nusp = 785461
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens19" AND topico.idTopico = "Topic10"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+// PM4
+CREATE (mens:Mensagem {mId:"Mens20", texto:"Olá", datahora:"2022-06-03T10:12:32.122+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens20" AND user.nusp = 19756484
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens20" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens21", texto:"E aí?", datahora:"2022-06-04T10:12:34.132+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens21" AND user.nusp = 12341516
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens21" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens22", texto:"Bom?", datahora:"2022-06-04T10:12:35.326+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens22" AND user.nusp = 19756484
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens22" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens23", texto:"Bom. E aí?", datahora:"2022-06-04T10:12:36.678+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens23" AND user.nusp = 12341516
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens23" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens24", texto:"Bom tbm", datahora:"2022-06-04T10:12:54.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens24" AND user.nusp = 19756484
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens24" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens25", texto:"Sucesso. Não esquece da entrega de LabBd :)", datahora:"2022-06-06T10:12:21.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens25" AND user.nusp = 12341516
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens25" AND topico.idTopico = "Topic11"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+// PM5
+CREATE (mens:Mensagem {mId:"Mens26", texto:"Olá", datahora:"2022-06-03T10:12:32.122+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens26" AND user.nusp = 13125467
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens26" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens27", texto:"E aí?", datahora:"2022-06-04T10:12:34.132+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens27" AND user.nusp = 11256973
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens27" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens28", texto:"Bom?", datahora:"2022-06-04T10:12:35.326+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens28" AND user.nusp = 13125467
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens28" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens29", texto:"Bom. E aí?", datahora:"2022-06-04T10:12:36.678+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens29" AND user.nusp = 11256973
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens29" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens30", texto:"Bom tbm", datahora:"2022-06-04T10:12:54.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens30" AND user.nusp = 13125467
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens30" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+CREATE (mens:Mensagem {mId:"Mens31", texto:"Sucesso. Amanhã tem prova de stat. Não esquece da calculadora :)", datahora:"2022-06-06T10:12:21.456+0300"});
+MATCH (mens), (user)
+WHERE mens.mId = "Mens31" AND user.nusp = 11256973
+CREATE (user)-[:Envio {}]->(mens);
+MATCH (mens), (topico)
+WHERE mens.mId = "Mens31" AND topico.idTopico = "Topic12"
+CREATE (mens)-[:Compoe {}]->(topico);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

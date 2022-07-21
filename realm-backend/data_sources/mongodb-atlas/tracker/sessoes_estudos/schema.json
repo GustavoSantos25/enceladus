@@ -1,0 +1,58 @@
+{
+    "bsonType": "object",
+    "title": "sessoes_estudo",
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "_partition": {
+        "bsonType": "string"
+      },
+      "data": {
+        "bsonType": "date"
+      },
+      "descricao": {
+        "bsonType": "string"
+      },
+      "local": {
+        "bsonType": "string"
+      },
+      "midias": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "monitores": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "professores": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "tarefas": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "string"
+        }
+      },
+      "topico": {
+        "bsonType": "string"
+      },
+      "usuarios": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "int"
+        }
+      }
+    },
+    "required": [
+      "_id",
+      "_partition"
+    ]
+}

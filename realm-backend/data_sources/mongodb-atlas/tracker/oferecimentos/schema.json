@@ -1,0 +1,169 @@
+{
+    "title": "oferecimento",
+    "properties": {
+      "_id": {
+        "bsonType": "objectId"
+      },
+      "_partition": {
+        "bsonType": "string"
+      },
+      "ano": {
+        "bsonType": "int"
+      },
+      "aulas": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "horario_fim": {
+              "bsonType": "date"
+            },
+            "horario_inicio": {
+              "bsonType": "date"
+            },
+            "midias": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "sala": {
+              "bsonType": "string"
+            },
+            "status": {
+              "bsonType": "string"
+            },
+            "usuarios": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "int"
+              }
+            }
+          }
+        }
+      },
+      "bibliografia": {
+        "bsonType": "string"
+      },
+      "coddis": {
+        "bsonType": "string"
+      },
+      "criterio_avaliacao": {
+        "bsonType": "string"
+      },
+      "monitor": {
+        "bsonType": "object",
+        "properties": {
+          "email": {
+            "bsonType": "string"
+          },
+          "media_avaliacoes": {
+            "bsonType": "double"
+          },
+          "nome": {
+            "bsonType": "string"
+          },
+          "total_avaliacoes": {
+            "bsonType": "int"
+          },
+          "ue": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "professor": {
+        "bsonType": "object",
+        "properties": {
+          "email": {
+            "bsonType": "string"
+          },
+          "media_avaliacoes": {
+            "bsonType": "int"
+          },
+          "nome": {
+            "bsonType": "string"
+          },
+          "página": {
+            "bsonType": "string"
+          },
+          "sala": {
+            "bsonType": "string"
+          },
+          "total_avaliacoes": {
+            "bsonType": "int"
+          },
+          "ue": {
+            "bsonType": "string"
+          }
+        }
+      },
+      "semestre": {
+        "bsonType": "int"
+      },
+      "tarefas": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "object",
+          "properties": {
+            "_id": {
+              "bsonType": "string"
+            },
+            "data_entrega": {
+              "bsonType": "date"
+            },
+            "data_inicio": {
+              "bsonType": "date"
+            },
+            "enunciado": {
+              "bsonType": "string"
+            },
+            "media_avaliacoes": {
+              "bsonType": "int"
+            },
+            "midias": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "string"
+              }
+            },
+            "modo": {
+              "bsonType": "string"
+            },
+            "notas": {
+              "bsonType": "array",
+              "items": {
+                "bsonType": "object",
+                "properties": {
+                  "nota": {
+                    "bsonType": "double"
+                  },
+                  "nusp": {
+                    "bsonType": "int"
+                  }
+                }
+              }
+            },
+            "numero": {
+              "bsonType": "int"
+            },
+            "tipo": {
+              "bsonType": "string"
+            },
+            "total_avaliacoes": {
+              "bsonType": "int"
+            }
+          }
+        }
+      },
+      "usuarios": {
+        "bsonType": "array",
+        "items": {
+          "bsonType": "int"
+        }
+      }
+    },
+    "required": [
+      "_id",
+      "_partition"
+    ]
+}

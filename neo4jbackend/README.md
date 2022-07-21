@@ -32,7 +32,7 @@ npm install
 docker run -p 7474:7474 -p 7687:7687 -v "$HOME"/neo4j/data:/data neo4j
 ```
 
-- Teste se o container subiu acessando o browser do neo4j em https://localhost:7474. Use as credenciais:
+- Teste se o container subiu acessando o browser do neo4j em http://localhost:7474. Use as credenciais:
   username: neo4j
   password: neo4j
 - Se o sistema pedir para mudar a senha, coloque admin.

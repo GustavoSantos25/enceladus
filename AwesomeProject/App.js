@@ -7,6 +7,7 @@ import { AuthProvider } from "./providers/AuthProvider";
 import { TasksProvider } from "./providers/TasksProvider";
 
 import { WelcomeView } from "./views/WelcomeView";
+import { SignUpView } from "./views/SignUpView";
 import { ProjectsView } from "./views/ProjectsView";
 import { TasksView } from "./views/TasksView";
 
@@ -22,7 +23,12 @@ const App = () => {
           <Stack.Screen
             name="Welcome View"
             component={WelcomeView}
-            options={{ title: "Task Tracker" }}
+            options={{ title: "Enceladus" }}
+          />
+          <Stack.Screen
+            name="SignUp"
+            component={SignUpView}
+            options={{ title: "Sign Up" }}
           />
           <Stack.Screen
             name="Projects"

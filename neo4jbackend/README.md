@@ -32,7 +32,7 @@ npm install
 docker run -p 7474:7474 -p 7687:7687 -v "$HOME"/neo4j/data:/data neo4j
 ```
 
-- Teste se o container subiu acessando o browser do neo4j em https://localhost/7687. Use as credenciais:
+- Teste se o container subiu acessando o browser do neo4j em https://localhost:7687. Use as credenciais:
   username: neo4j
   password: neo4j
 - Se o sistema pedir para mudar a senha, coloque admin.
@@ -75,8 +75,8 @@ Para rodar o servidor execute:
 node app
 ```
 
-Cheque https://localhost/3000/docs para certificar que o servidor está rodando.
+Cheque https://localhost:3000/docs para certificar que o servidor está rodando.
 
 ## Documentação da API
 
-O servidor deve estar na porta 3000 do local host, e a documentação da API pode ser vista em https://localhost/3000/docs/
+O servidor deve estar na porta 3000 do local host, e a documentação da API pode ser vista em https://localhost:3000/docs/

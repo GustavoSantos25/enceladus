@@ -75,8 +75,8 @@ Para rodar o servidor execute:
 node app
 ```
 
-Cheque https://localhost:3000/docs para certificar que o servidor está rodando.
+Cheque http://localhost:3000/docs para certificar que o servidor está rodando.
 
 ## Documentação da API
 
-O servidor deve estar na porta 3000 do local host, e a documentação da API pode ser vista em https://localhost:3000/docs/
+O servidor deve estar na porta 3000 do local host, e a documentação da API pode ser vista em http://localhost:3000/docs/

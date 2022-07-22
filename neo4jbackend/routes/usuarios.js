@@ -102,3 +102,35 @@ exports.list = function (req, res, next) {
   };
 
   
+/**
+ * @swagger
+ * /api/v0/usuarios/nome/{nome}:
+ *   get:
+ *     tags:
+ *     - usuarios
+ *     description: Os usuário que contenham o nome dado (pode ser como substring do nome).
+ *     summary: Retorna os usuários com o nome passado
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: nome
+ *         description: nome a ser buscado.
+ *         in: path
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Uma lista de usuários cujos nomes contém o nome passado
+ *         schema:
+ *           type: array
+ *           items:
+ *             $ref: '#/definitions/Usuario' 
+ */
+ exports.getByName = function (req, res, next) {
+  nome = req.params.nome;
+  if (!nome) throw {message: 'Invalid name', status: 400};
+
+  Usuarios.getByName(dbUtils.getSession(req), nome)
+    .then(response => writeResponse(res, response))
+    .catch(next);
+};

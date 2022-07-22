@@ -5,6 +5,7 @@
 const _ = require('lodash');
 const Topico = require('../models/neo4j/topico');
 const Mensagem = require('../models/neo4j/mensagem');
+const Tag = require('../models/neo4j/tag');
 
 const getAll = function(session) {
     return session.readTransaction(txc =>
@@ -24,6 +25,16 @@ const getTopicsByTag =  function (session, tag) {
         ).then(r => _manyTopicos(r));
 };
 
+const getTagByTopic =  function (session, topicId) {
+  const query = [
+          'MATCH (tag: Tag)-[c:Classifica]->(topico:Topico {idTopico:$topicId})',
+          'RETURN DISTINCT tag'
+  ].join('\n');
+
+  return session.readTransaction(txc =>
+          txc.run(query, {topicId:topicId})
+      ).then(r => _manyTags(r));
+};
 
 const getMessagesById = function (session, topicId) {
   const query = [
@@ -42,6 +53,11 @@ const _manyTopicos = function (result) {
     return result.records.map(r => new Topico(r.get('topico')));
   };
 
+const _manyTags = function (result) {
+    return result.records.map(r => new Tag(r.get('tag')));
+  };
+
+
 const _manyMessages = function (result) {
     return result.records.map(r => new Mensagem(r.get('mensagem')));
   };
@@ -50,5 +66,6 @@ const _manyMessages = function (result) {
 module.exports = {
 getAll: getAll,
 getTopicsByTag: getTopicsByTag,
-getMessagesById: getMessagesById
+getMessagesById: getMessagesById,
+getTagByTopic: getTagByTopic
 };

@@ -117,10 +117,45 @@ exports.list = function (req, res, next) {
  *             $ref: '#/definitions/Mensagem'
  */
  exports.messages = function (req, res, next) {
-    const topico = req.params.topico;
+    topico = req.params.topico;
     if (!topico) throw {message: 'Invalid topic id', status: 400};
 
     Topicos.getMessagesById(dbUtils.getSession(req), topico)
+      .then(response => writeResponse(res, response))
+      .catch(next);
+  };
+
+
+/**
+ * @swagger
+ * /api/v0/topicos/tags/{topico}:
+ *   get:
+ *     tags:
+ *     - topicos
+ *     description: Retorna todos os tag do tópico passado.
+ *     summary: Retorna todos os tag do tópico passado.
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: topico
+ *         description: id do tópico
+ *         in: path
+ *         required: true
+ *         type: string
+ *     responses:
+ *       200:
+ *         description: Uma lista de tags
+ *         schema:
+ *           type: array
+ *           items:
+ *             $ref: '#/definitions/Tag'
+ */
+ exports.tagByTopic = function (req, res, next) {
+    topic = req.params.topico;
+    console.log(topic);
+    if (!topic) throw {message: 'Invalid nusp', status: 400};
+
+    Topicos.getTagByTopic(dbUtils.getSession(req), topic)
       .then(response => writeResponse(res, response))
       .catch(next);
   };

@@ -83,6 +83,7 @@ api.get("/usuarios/amigos/:nusp", routes.usuarios.friends);
 api.get("/usuarios/nome/:nome", routes.usuarios.getByName);
 api.get("/topicos", routes.topicos.list);
 api.get("/topicos/byTag/:tag", routes.topicos.byTag);
+api.get("/topicos/tags/:topico", routes.topicos.tagByTopic);
 api.get("/topicos/messages/:topico", routes.topicos.messages);
 
 

@@ -35,7 +35,21 @@ const getFriendsByNusp =  function (session, nusp) {
     return session.readTransaction(txc =>
             txc.run(query, {userNusp:nusp})
         ).then(r => _manyUsuarios(r));
+};  
+
+
+const getByName =  function (session, nome) {
+    const query = [
+            'MATCH (usuario:User)',
+            'WHERE usuario.nome CONTAINS $nome',
+            'RETURN usuario'
+    ].join('\n');
+
+    return session.readTransaction(txc =>
+            txc.run(query, {nome:nome})
+        ).then(r => _manyUsuarios(r));
 };
+
 
 
 
@@ -47,5 +61,6 @@ const _manyUsuarios = function (result) {
 module.exports = {
   getAll: getAll,
   getRatingsByNusp: getRatingsByNusp,
-  getFriendsByNusp: getFriendsByNusp
+  getFriendsByNusp: getFriendsByNusp,
+  getByName: getByName
 };

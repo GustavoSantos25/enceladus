@@ -47,8 +47,8 @@ const _manyMessages = function (result) {
   };
 
 
-  module.exports = {
-    getAll: getAll,
-    getTopicsByTag: getTopicsByTag,
-    getMessagesById: getMessagesById
-  };
+module.exports = {
+getAll: getAll,
+getTopicsByTag: getTopicsByTag,
+getMessagesById: getMessagesById
+};

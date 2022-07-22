@@ -72,8 +72,6 @@ api.use(neo4jSessionCleanup);
 
 //api routes
 
-api.post("/login", routes.users.login);
-api.get("/users/me", routes.users.me);
 
 api.get("/professores", routes.professores.list);
 api.get("/professores/ratings", routes.professores.ratings);

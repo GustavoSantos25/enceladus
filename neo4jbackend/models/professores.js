@@ -1,6 +1,29 @@
 const _ = require('lodash');
 const Professor = require('../models/neo4j/professor');
 
+
+
+const register = function (session, nome, email) {
+  return session.readTransaction(txc => txc.run('MATCH (professor:Professor {email: $email}) RETURN professor', {email: email}))
+    .then(results => {
+      if (!_.isEmpty(results.records)) {
+        throw {email: 'email already in use', status: 400}
+      }
+      else {
+        return session.writeTransaction(txc => txc.run('CREATE (professor:Professor {nome: $nome, email: $email}) RETURN professor',
+          {
+            nome: nome,
+            email: email
+          }
+        )).then(results => {
+            return new Professor(results.records[0].get('professor'));
+          }
+        )
+      }
+    });
+};
+
+
 const getAll = function(session) {
   return session.readTransaction(txc =>
       txc.run('MATCH (professor:Professor) RETURN professor')
@@ -33,6 +56,7 @@ const _manyProfessores = function (result) {
 };
 
 module.exports = {
+  register: register,
   getAll: getAll,
   getRatings: getRatings
 };

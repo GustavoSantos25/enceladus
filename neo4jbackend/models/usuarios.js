@@ -37,6 +37,9 @@ const getFriendsByNusp =  function (session, nusp) {
         ).then(r => _manyUsuarios(r));
 };
 
+
+
+
 const _manyUsuarios = function (result) {
   return result.records.map(r => new Usuario(r.get('usuario')));
 };

@@ -1,7 +1,7 @@
 import Sequelize from 'sequelize'
 
-import sequelize from "../utils/database";
-import UnidadeEnsino from './UnidadeEnsino';
+import sequelize from "../utils/database.js";
+import UnidadeEnsino from './UnidadeEnsino.js';
 
 const SalaEstudos = sequelize.define('sala_estudos', {
     id: {

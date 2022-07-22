@@ -160,7 +160,7 @@ exports.list = function (req, res, next) {
  *       201:
  *         description: Your new user
  *         schema:
- *           $ref: '#/definitions/User'
+ *           $ref: '#/definitions/Usuario'
  *       400:
  *         description: Error message(s)
  */

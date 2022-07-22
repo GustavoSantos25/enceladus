@@ -22,49 +22,6 @@ const Users = require('../models/users')
 
 /**
  * @swagger
- * /api/v0/register:
- *   post:
- *     tags:
- *     - users
- *     description: Register a new user
- *     produces:
- *       - application/json
- *     parameters:
- *       - name: body
- *         in: body
- *         type: object
- *         schema:
- *           properties:
- *             username:
- *               type: string
- *             password:
- *               type: string
- *     responses:
- *       201:
- *         description: Your new user
- *         schema:
- *           $ref: '#/definitions/User'
- *       400:
- *         description: Error message(s)
- */
-exports.register = function (req, res, next) {
-  const username = _.get(req.body, 'username');
-  const password = _.get(req.body, 'password');
-
-  if (!username) {
-    throw {username: 'This field is required.', status: 400};
-  }
-  if (!password) {
-    throw {password: 'This field is required.', status: 400};
-  }
-
-  Users.register(dbUtils.getSession(req), username, password)
-    .then(response => writeResponse(res, response, 201))
-    .catch(next);
-};
-
-/**
- * @swagger
  * /api/v0/login:
  *   post:
  *     tags:

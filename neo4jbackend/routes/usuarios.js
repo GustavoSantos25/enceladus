@@ -1,7 +1,7 @@
 const Usuarios = require("../models/usuarios")
   , writeResponse = require('../helpers/response').writeResponse
   , dbUtils = require('../neo4j/dbUtils');
-
+const _ = require('lodash');
 /**
  * @swagger
  * definition:
@@ -132,5 +132,50 @@ exports.list = function (req, res, next) {
 
   Usuarios.getByName(dbUtils.getSession(req), nome)
     .then(response => writeResponse(res, response))
+    .catch(next);
+};
+
+
+/**
+ * @swagger
+ * /api/v0/register:
+ *   post:
+ *     tags:
+ *     - usuarios
+ *     description: Registra um novo usuário
+ *     produces:
+ *       - application/json
+ *     parameters:
+ *       - name: body
+ *         in: body
+ *         type: object
+ *         schema:
+ *           type: object
+ *           properties:
+ *             nome:
+ *               type: string
+ *             nusp:
+ *               type: integer
+ *     responses:
+ *       201:
+ *         description: Your new user
+ *         schema:
+ *           $ref: '#/definitions/User'
+ *       400:
+ *         description: Error message(s)
+ */
+ exports.register = function (req, res, next) {
+  const nome = _.get(req.body, 'nome');
+  const nusp = _.get(req.body, 'nusp');
+
+  if (!nome) {
+    throw {nome: 'This field is required.', status: 400};
+  }
+  if (!nusp) {
+    throw {nusp: 'This field is required.', status: 400};
+  }
+
+  Usuarios.register(dbUtils.getSession(req), nome, nusp)
+    .then(response => writeResponse(res, response, 201))
     .catch(next);
 };

@@ -71,7 +71,7 @@ api.use(setAuthUser);
 api.use(neo4jSessionCleanup);
 
 //api routes
-api.post("/register", routes.users.register);
+
 api.post("/login", routes.users.login);
 api.get("/users/me", routes.users.me);
 
@@ -81,6 +81,7 @@ api.get("/usuarios", routes.usuarios.list);
 api.get("/usuarios/ratings/:nusp", routes.usuarios.ratings);
 api.get("/usuarios/amigos/:nusp", routes.usuarios.friends);
 api.get("/usuarios/nome/:nome", routes.usuarios.getByName);
+api.post("/register", routes.usuarios.register);
 api.get("/topicos", routes.topicos.list);
 api.get("/topicos/byTag/:tag", routes.topicos.byTag);
 api.get("/topicos/tags/:topico", routes.topicos.tagByTopic);

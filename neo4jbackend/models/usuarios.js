@@ -2,6 +2,28 @@ const _ = require('lodash');
 const { session } = require('neo4j-driver');
 const Usuario = require('../models/neo4j/usuario');
 
+
+const register = function (session, username, nusp) {
+  return session.readTransaction(txc => txc.run('MATCH (user:User {nusp: $nusp}) RETURN user', {nusp: nusp}))
+    .then(results => {
+      if (!_.isEmpty(results.records)) {
+        throw {nusp: 'nusp already in use', status: 400}
+      }
+      else {
+        return session.writeTransaction(txc => txc.run('CREATE (user:User {nome: $username, nusp: $nusp}) RETURN user',
+          {
+            username: username,
+            nusp: nusp
+          }
+        )).then(results => {
+            return new Usuario(results.records[0].get('user'));
+          }
+        )
+      }
+    });
+};
+
+
 const getAll = function(session) {
   return session.readTransaction(txc =>
       txc.run('MATCH (usuario:User) RETURN usuario')
@@ -62,5 +84,6 @@ module.exports = {
   getAll: getAll,
   getRatingsByNusp: getRatingsByNusp,
   getFriendsByNusp: getFriendsByNusp,
-  getByName: getByName
+  getByName: getByName,
+  register: register
 };

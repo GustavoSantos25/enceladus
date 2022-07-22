@@ -19,7 +19,7 @@ const Usuario = sequelize.define('usuario', {
    tipo: {
       type: Sequelize.STRING
    },
-   name: {
+   nome: {
       type: Sequelize.STRING,
       allowNull: false
    },

@@ -9,7 +9,7 @@ export const create_usuario = (req, res, next) => {
     }})
     .then(unidade_ensino => {
         if(!unidade_ensino){
-            const unidade_ensino = UnidadeEnsino.create(({ nome: req.body.unidade_ensino }))
+            unidade_ensino = UnidadeEnsino.create(({ nome: req.body.unidade_ensino }))
         }
         Usuario.create(({
             nusp: req.body.nusp,
@@ -92,8 +92,18 @@ export const login = (req, res, next) => {
 
 export const create_unidade_ensino = (req, res, next) => {
     UnidadeEnsino.create(({
-        nome: req.body.nome
+        nome: req.body.nome,
+        rua: req.body.rua,
+        numero: req.body.numero
     }))
+    .then(unidade_ensino => {
+        if(unidade_ensino){
+            res.sendStatus(200)
+        }
+        else{
+            res.sendStatus(409)
+        }
+    })
 }
 
 
@@ -103,10 +113,15 @@ export const create_sala_estudos = (req, res, next) => {
     }})
     .then(unidade_ensino => {
         if(!unidade_ensino){
-            const unidade_ensino = UnidadeEnsino.create(({ nome: req.body.unidade_ensino }))
+            unidade_ensino = UnidadeEnsino.create(({ nome: req.body.unidade_ensino }))
         }
         SalaEstudos.create(({
             nome: req.body.nome,
+            limite_pessoas: req.body.limite_pessoas,
+            qtd_tomadas: req.body.qtd_tomadas,
+            ventilacao: req.body.ventilacao,
+            presenca_lousa: req.body.presenca_lousa,
+            status: req.body.status,
             unidade_ensino_id: unidade_ensino.id
         }))
         .then(sala_estudos => {
